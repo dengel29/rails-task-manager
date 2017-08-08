@@ -1,0 +1,19 @@
+<!-- index.html.erb -->
+<!-- TODO: edit task.status to be "complete" or "incomplete" -->
+<% @tasks.each do |task| %>
+  <h2><%= task.name %></h2>
+  <p><%= task.status %></p>
+  <p><%= link_to task.name, task_path(task) %></%></p>
+<% end %>
+
+
+<!-- link to:  show_view-->
+<%= link_to "Show", task_path(task) %>
+<!-- link to: edit_view -->
+<!-- link to: new_view to create a new task -->
+<!-- link to: delete action -->
+
+<%= link_to "Delete", task_path(task),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+<!-- add method :delete option to link_to helper -->
