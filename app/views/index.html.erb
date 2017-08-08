@@ -4,6 +4,8 @@
   <h2><%= task.name %></h2>
   <p><%= task.status %></p>
   <p><%= link_to task.name, task_path(task) %></%></p>
+  <p><%= link_to "Show", task_path(task) %></p>
+
 <% end %>
 
 
